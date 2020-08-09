@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>File formats - PStomo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "File formats";
+    var mkdocs_page_input_path = "formats.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> PStomo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">File formats</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#station-list">Station list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#source-locations">Source locations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#arrival-times">Arrival times</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#station-line">Station line</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#arrival-time-line">Arrival time line</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#velocity-model">Velocity model</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ray-coverage">Ray coverage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#output-travel-times">Output travel times</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../parameters/">Parameters</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">PStomo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>File formats</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="file-formats">File formats</h1>
+<p><code>PStomo</code> has 3 basic input files (in addition to the parameter file and the initial/starting model):</p>
+<ol>
+<li><strong>station file</strong>: contains station coordinates in cartesian (flat Earth) projection</li>
+<li><strong>source file</strong>: contains origin time and hypocenter of sources (earthquakes and/or controlled) in cartesian projection</li>
+<li><strong>arrival time file</strong>: contains arrival times of P (and S) waves sorted by recording station</li>
+</ol>
+<p>Although it is not necessary, we follow this convention for naming the input files:</p>
+<ul>
+<li>all files have a <code>.in</code> extension</li>
+<li>all files begin with a common prefix, which is a short identifier of the project or region 
+  (e.g. <code>ice</code> for Iceland or <code>ncal</code> for Northern California)</li>
+<li>station file has the <code>_stat</code>suffix (e.g. <code>ice_stat.in</code>)</li>
+<li>source file has the <code>_src</code>suffix (e.g. <code>ice_src.in</code>)</li>
+<li>arrival time file has the <code>_tt</code>suffix (e.g. <code>ice_tt.in</code>)</li>
+</ul>
+<p>Since we often have many more sources than stations, to reduce computing time inside <code>PStomo</code> 
+travel times are calculated from the stations. Therefore the concept of source and receiver is
+reversed inside the code.</p>
+<h2 id="station-list">Station list</h2>
+<p>A station file contains lines with the following columns (one for each station):</p>
+<pre><code>STATION_ID X Y Z MAX_DISTANCE NUMBER_ARRIVAL_TIMES USE_STATION FLAG STATION_CODE
+</code></pre>
+
+<ul>
+<li><code>STATION_ID</code> = numerical station ID <strong>(not passed to main)</strong></li>
+<li><code>X</code> = x coordinate in km</li>
+<li><code>Y</code> = y coordinate in km</li>
+<li><code>Z</code> = z coordinate in km (negative if above sea level)</li>
+<li><code>MAX_DISTANCE</code> = distance (km) to furthest source recorded by this station <strong>(not passed to main)</strong></li>
+<li><code>NUMBER_ARRIVAL_TIMES</code> = number of arrival times for this station</li>
+<li><code>USE_STATION</code> = use flag: 0 use, 1 do not use <strong>(WARNING: opposite to standard true/false convention)</strong></li>
+<li><code>FLAG</code> = additional flag <strong>(not passed to main)</strong></li>
+<li><code>STATION_CODE</code> = alphanumeric station code <strong>(not passed to main)</strong></li>
+</ul>
+<pre><code>    0  -33.59028   -4.31897   -0.79400  116.72459  1225    0    0 CADE
+    1  -42.17252   12.75307   -1.16000  150.92570   854    0    0 CBOL
+    2  -20.12271    2.41153   -2.21000  101.10428  2142    0    0 CCAN
+    3  -26.79712    2.82335   -2.06400   94.74211  1168    0    0 CCHO
+    4  -15.59873    9.43089   -2.10300  109.41433   827    0    0 CDIE
+    5  -33.25449   10.47509   -1.62600  111.62872   962    0    0 CDOS
+    6  -18.92852   12.64890   -2.11000  108.85104   762    0    0 CFOR
+</code></pre>
+
+<h2 id="source-locations">Source locations</h2>
+<p>A source file contains lines with the following columns (one for each source):</p>
+<pre><code>SOURCE_ID YYMMDD HHMM SS.FF... X Y Z MAGNITUDE EVENT_TYPE EVENT_GROUP_ID FLAG
+</code></pre>
+
+<ul>
+<li><code>SOURCE_ID</code> = source number/ID (usually starts at 0 but not required?)</li>
+<li><code>YYMMDD</code> = origin time year, month, and day for this source <strong>(WARNING: two-digit year)</strong></li>
+<li><code>HHMM</code> = origin time hour and minute for this source</li>
+<li><code>SS.FF...</code> = origin time seconds and fractionary part (variable precision)</li>
+<li><code>X</code> = x coordinate in km</li>
+<li><code>Y</code> = y coordinate in km</li>
+<li><code>Z</code> = z coordinate/focal depth in km (negative if above sea level)</li>
+<li><code>MAGNITUDE</code> = event magnitude</li>
+<li><code>EVENT_TYPE</code> = 0 for earthquakes, 1 for explosions (controlled source)</li>
+<li><code>EVENT_GROUP_ID</code> = event group ID this source belongs to (if no event groups <code>SOURCE_ID = EVENT_GROUP_ID</code>)</li>
+<li><code>FLAG</code> = <strong>(passed to main but apparently not used)</strong></li>
+</ul>
+<pre><code>     0 040628 0342 29.90   -29.3320     9.4560     0.0000   1.90      0      0      0
+     1 040628 0423 48.20   -29.9220     9.0140     0.0000   1.90      0      1      0
+     2 040629 2125 53.40   -16.4760    13.3100     0.0000   2.70      0      2      0
+     3 040706 1855 57.60   -28.3670     2.8040     0.0000   1.70      0      3      0
+     4 040716 2152  3.70   -34.7100    15.7880    24.5000   1.60      0      4      0
+     5 040725 0059 41.60   -29.5290     9.2350     0.0000   1.80      0      5      0
+     6 040727 0514 10.60   -22.9390    18.6410    16.4000   2.40      0      6      0
+     7 040727 0514 44.40   -27.5580    13.5530     5.1000   2.60      0      7      0
+     8 040727 0531 10.50   -28.0430    15.2170     8.4000   1.80      0      8      0
+     9 040727 1747 38.80   -30.6180     5.6910     0.0000   1.40      0      9      0
+    10 040728 0029 27.00   -28.6480     9.0110     0.0000   1.60      0     10      0
+    11 040730 1111 51.00   -29.1360     9.6770     0.0000   2.50      0     11      0
+</code></pre>
+
+<h2 id="arrival-times">Arrival times</h2>
+<p>The arrival time file contains two types of lines:</p>
+<h3 id="station-line">Station line</h3>
+<p>The arrival time file must begin with a station line and must contain exactly as many station lines
+as stations listed in the station file (and in the same order).</p>
+<pre><code>STATION_CODE NUMBER_ARRIVAL_TIMES
+</code></pre>
+
+<ul>
+<li><code>STATION_CODE</code> = station code <strong>(program does not check that it coincides with code in station file)</strong></li>
+<li><code>NUMBER_ARRIVAL_TIMES</code> = number of arrival times for this station (this exact same of number of
+   arrival time lines must follow this station line)</li>
+</ul>
+<h3 id="arrival-time-line">Arrival time line</h3>
+<pre><code>SOURCE_ID YYMMDD HHMM P_SECOND P_WEIGHT P_USE S_SECOND S_WEIGHT S_USE
+</code></pre>
+
+<ul>
+<li><code>SOURCE_ID</code> = source ID in source file this arrival time belongs to</li>
+<li><code>YYMMDD</code> = year, month and day of arrival time <strong>(WARNING: two-digit year)</strong></li>
+<li><code>HHMM</code> = hour and minute of arrival time</li>
+<li><code>P_SECOND</code> = second of P-wave arrival time</li>
+<li><code>P_WEIGHT</code> = weight of P-wave arrival time (HYPO71 convention: 0 = full weigth, &gt; 3 = do not use)</li>
+<li><code>P_USE</code> = flag for using this P phase: 0 = use, &gt; 0 do not use <strong>(WARNING: opposite to standard true/false convention)</strong></li>
+<li><code>S_SECOND</code> = second of S-wave arrival time (can be greater than 60 s if S arrival time does not occur in same minute as P arrival time).
+   If S phase is not present then <code>S_SECOND = 0.0</code> and <code>S_WEIGHT = S_USE = 9</code>.</li>
+<li><code>S_WEIGHT</code> = weight of S-wave arrival time (HYPO71 convention: 0 = full weigth, &gt; 3 = do not use)</li>
+<li><code>S_USE</code> = flag for using this S phase: 0 = use, &gt; 0 do not use <strong>(WARNING: opposite to standard true/false convention)</strong></li>
+</ul>
+<p>Although the station file lists <code>STATION_ID</code> and <code>STATION_CODE</code>, these values are not used nor
+checked against the values in the arrival time file. Instead the program assumes
+that the stations in the arrival time file appear in exactly the same order as in the station file.</p>
+<p>However <code>NUMBER_ARRIVAL_TIMES</code> in the arrival time file and in the station file must be the same,
+and is verified by the program.</p>
+<pre><code>CADE   1225
+     371 170401 1657   10.550   1   0   17.120   2   0
+     372 170406 2350    7.840   1   0    9.660   2   0
+     373 170408 0846   17.160   1   0    0.000   9   9
+     374 170623 2148   26.150   1   0   28.430   2   0
+     375 170410 0101   14.790   1   0   20.740   2   0
+     378 170421 0450   26.430   1   0   33.150   2   0
+     379 170422 1416   25.160   1   0   30.520   2   0
+     380 170423 1932   12.340   1   0   14.430   2   0
+     381 170424 0201   31.170   1   0   32.550   2   0
+     386 170513 0126   30.780   1   0   33.070   2   0
+     389 170523 0029   22.760   1   0   24.840   2   0
+     .
+     .
+     .
+    2223 200406 2219   54.000   1   0   55.910   2   0
+    2224 200407 0335   37.460   1   0   42.790   2   0
+    2225 200407 2359   52.180   1   0   53.150   2   0
+    2226 200408 0612   20.060   1   0   25.330   2   0
+CBOL   854
+     330 160803 2230   50.560   1   0   57.750   2   0
+     331 160831 0734   26.290   1   0   34.960   2   0
+     332 160927 2347   53.610   1   0   61.520   2   0
+     335 161003 1340   49.230   1   0   58.740   2   0
+     .
+     .
+     .
+</code></pre>
+
+<h2 id="velocity-model">Velocity model</h2>
+<h2 id="ray-coverage">Ray coverage</h2>
+<h2 id="output-travel-times">Output travel times</h2>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../parameters/" class="btn btn-neutral float-right" title="Parameters">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../about/" class="btn btn-neutral" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../parameters/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
