@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Parameters - PStomo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Parameters";
+    var mkdocs_page_input_path = "parameters.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> PStomo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../formats/">File formats</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Parameters</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#model-parameters">Model parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#input-files">Input files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#travel-time-parameters">Travel time parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inversion-parameters">Inversion parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#earthquake-parameters">Earthquake parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vpvs-parameters">Vp/Vs parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#output-files">Output files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#to-sort">To sort</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">PStomo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Parameters</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="parameters">Parameters</h1>
+<h2 id="model-parameters">Model parameters</h2>
+<ul>
+<li><code>h</code> = size of travel time basic cell, identical in the X, Y, and Z directions (km)</li>
+<li><code>magX</code> = number of travel cells that a model cell has in the X direction</li>
+<li><code>magY</code> = number of travel cells that a model cell has in the Y direction</li>
+<li><code>magZ</code> = number of travel cells that a model cell has in the Z direction</li>
+<li><code>nx</code> = number of model cells in the X direction (<code>xlen = nx * magX * h</code>)</li>
+<li><code>ny</code> = number of model cells in the Y direction (<code>ylen = ny * magY * h</code>)</li>
+<li><code>nz</code> = number of model cells in the Z direction (<code>zlen = nz * magZ * h</code>)</li>
+<li><code>baseElev</code> = top of the model in km (negative if above sea level)</li>
+<li><code>xmin</code> = left edge of the model in km (default = 0.0) <strong>(not implemented!)</strong></li>
+<li><code>ymin</code> = bottom edge of the model in km (default = 0.0) <strong>(not implemented!)</strong></li>
+</ul>
+<h2 id="input-files">Input files</h2>
+<ul>
+<li><code>srcfil</code> = station file (it is called "src" because stations are treated as sources in main code)</li>
+<li><code>recvfil</code> = source file (it is called "recv" becuase sources are treated as receivers in main code)</li>
+<li><code>obfile</code> = arrival time file</li>
+<li><code>velfile</code> = binary file containing input/initial P-wave velocity model</li>
+<li><code>velfile_s</code> = binary file containing input/initial S-wave velocity model</li>
+</ul>
+<h2 id="travel-time-parameters">Travel time parameters</h2>
+<ul>
+<li><code>maxres</code> = maximum P residual in seconds</li>
+<li><code>maxsres</code> = maximum S residual in seconds</li>
+</ul>
+<h2 id="inversion-parameters">Inversion parameters</h2>
+<ul>
+<li><code>invert</code> = flag to invert for velocity model: 1 = true, 0 = false</li>
+<li><code>smoother</code> = smoothing constraint (small for rough model, high for smooth model)</li>
+<li><code>ilsqr</code> = maximum number of LSQR iterations</li>
+<li><code>max_cond_num</code> = maximum condition number for LSQR</li>
+<li><code>truncater</code> = SVD truncater</li>
+<li><code>UVout_flg</code> = flag to dump Ritz vectors to obtain resolution matrix: 1 = true, 0 = false</li>
+<li><code>reortho_flg</code> = flag to reorthog. Ritz vectors (if <code>UVout_flg = 1</code>): 1 = true, 0 = false</li>
+</ul>
+<h2 id="earthquake-parameters">Earthquake parameters</h2>
+<ul>
+<li><code>no_shots</code> = flag to indicate that dataset contains no explosions: 1 = true (no explosions), 0 = false (explosions)</li>
+<li><code>no_earthq</code> = flag to indicate that datasets contains no earthquakes: 1 = true (no earthquakes), 0 = false (earthquakes)</li>
+<li><code>min_z</code> = </li>
+</ul>
+<h2 id="vpvs-parameters">Vp/Vs parameters</h2>
+<ul>
+<li><code>swave_flg</code> = use S waves flag: 1 = true, 0 = false</li>
+<li><code>vps_ratio</code> = Vp/Vs ratio (a priori?, use to regularize?)</li>
+<li><code>ps_wght_type</code> = P/S wave weight flag: 0 = do not weight P and S residuals, 1 = weight based on variance, 2 = fixed weight</li>
+<li><code>ps_wght</code> = weight to use when <code>ps_wght_type = 2</code>
+p_res_var</li>
+</ul>
+<h2 id="output-files">Output files</h2>
+<ul>
+<li><code>ttlog</code> = flag to ouput file with computed travel times <code>Traveltime.log</code>: 1 = true, 0 = false</li>
+<li><code>eqinfo</code> = flag to output file with hypocenter errors: 1 = true, 0 = false</li>
+</ul>
+<h2 id="to-sort">To sort</h2>
+<ul>
+<li><code>xwt</code> = </li>
+<li><code>ywt</code> = </li>
+<li><code>zwt</code> = </li>
+<li><code>magz_u</code> = </li>
+<li><code>z_u_lim</code> = </li>
+<li><code>magz_l</code> = </li>
+<li><code>z_l_lim</code> = </li>
+<li><code>rel_only</code> = </li>
+<li><code>loc_only</code> = </li>
+<li><code>relative</code> = </li>
+<li><code>maxOffset</code> = </li>
+<li><code>minOffset</code> = </li>
+<li><code>errlog</code> = </li>
+<li><code>reslog</code> = </li>
+<li><code>raylog</code> = </li>
+<li><code>msd</code> = </li>
+<li><code>interpolate</code> = </li>
+<li><code>min_z</code> = </li>
+<li><code>max_dh</code> = </li>
+<li><code>max_dt</code> = </li>
+<li><code>app_var</code> = </li>
+<li><code>detail</code> = </li>
+<li><code>det_z</code> = </li>
+<li><code>det_magz</code> = </li>
+<li><code>reduce</code> = </li>
+<li><code>red_z</code> = </li>
+<li><code>red_magx</code> = </li>
+<li><code>red_magy</code> = </li>
+<li><code>red_magz</code> = </li>
+<li><code>variable_sm</code> = </li>
+<li><code>auto_cov_lim</code> = </li>
+<li><code>maxsmooth</code> = </li>
+<li><code>minsmooth</code> = </li>
+<li><code>maxcover</code> = </li>
+<li><code>mincover</code> = </li>
+<li><code>lnsmooth</code> = </li>
+<li><code>Podvin_Lecomte</code> = </li>
+<li><code>Podvin_Lecomte_msg</code> = </li>
+<li><code>shotstat</code> = </li>
+<li><code>max_stat</code> = </li>
+<li><code>velzone</code> = </li>
+<li><code>velzone_tres</code> = </li>
+<li><code>vps_ratio</code> = </li>
+<li><code>cross_grad</code> = </li>
+<li><code>cross_grad_horiz</code> = </li>
+<li><code>cross_grad_wght</code> = </li>
+<li><code>use_pert_file</code> = </li>
+<li><code>perturb_file</code> = </li>
+<li><code>perturb_file_s</code> = </li>
+<li><code>cross_grad_ext</code> = </li>
+<li><code>cross_grad_ext_horiz</code> = </li>
+<li><code>xg_ext_file</code> = </li>
+<li><code>cross_grad_ex_wght</code> = </li>
+<li><code>cross_grad_ext_ons</code> = </li>
+<li><code>cross_grad_ex_inv</code> = </li>
+<li><code>out_jacob</code> = </li>
+<li><code>out_res</code> = </li>
+<li><code>NETtomo</code> = </li>
+<li><code>NETmodel</code> = </li>
+<li><code>reg_only</code> = </li>
+<li><code>loc_pdf_use</code> = </li>
+<li><code>loc_pdf_name</code> = </li>
+<li><code>loc_pdf_nx</code> = </li>
+<li><code>loc_pdf_ny</code> = </li>
+<li><code>loc_pdf_nz</code> = </li>
+<li><code>loc_pdf_dx</code> = </li>
+<li><code>loc_pdf_dy</code> = </li>
+<li><code>loc_pdf_dz</code> = </li>
+<li><code>vel_pdf_use</code> = </li>
+<li><code>vel_pdf_name</code> = </li>
+<li><code>vel_pdf_nx</code> = </li>
+<li><code>vel_pdf_ny</code> = </li>
+<li><code>vel_pdf_nz</code> = </li>
+<li><code>vel_pdf_dx</code> = </li>
+<li><code>vel_pdf_dy</code> = </li>
+<li><code>vel_pdf_dz</code> = </li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tutorials/" class="btn btn-neutral float-right" title="Tutorials">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../formats/" class="btn btn-neutral" title="File formats"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../formats/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tutorials/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

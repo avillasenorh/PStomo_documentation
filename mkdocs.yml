@@ -1,0 +1,9 @@
+site_name: PStomo
+
+nav:
+    - Home: index.md
+    - About: about.md
+    - File formats: formats.md
+    - Parameters: parameters.md
+    - Tutorials: tutorials.md
+theme: readthedocs
