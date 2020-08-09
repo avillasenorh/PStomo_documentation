@@ -16,7 +16,7 @@
 ## Input files
 
 - `srcfil` = station file (it is called "src" because stations are treated as sources in main code)
-- `recvfil` = source file (it is called "recv" becuase sources are treated as receivers in main code)
+- `recvfil` = source file (it is called "recv" because sources are treated as receivers in main code)
 - `obfile` = arrival time file
 - `velfile` = binary file containing input/initial P-wave velocity model
 - `velfile_s` = binary file containing input/initial S-wave velocity model
