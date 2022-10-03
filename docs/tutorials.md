@@ -2,9 +2,6 @@
 
 ## 0. Setting up the Linux virtual machine
 
-
-### Instalación de la máquina virtual
-
 A Linux virtual machine has been created to run the examples of local
 earthquake tomography processing.
 
@@ -30,21 +27,19 @@ using the file `course.ova` with the following steps:
 5. Once the virtual machine has been created, you can manage it in this window:
    ![virtualbox_manager](virtualbox_manager.png)
    If you have not changed the name, the virtual machine will appear as `Ubuntu 16.04`.
-   Haciendo click en el botón `Settings` pueden modificarse los valores de CPUs, RAM, etc de
-   la máquina virtual. En cuanto a CPUs, con 1 es suficiente. En cuanto a la RAM, un valor
-   entre 1 GB y la mitad de la RAM del ordenador es apropiado. Si vuestro ordenador tiene poca
-   RAM (4 GB o menos), intentad no correr ninguna otra aplicación mientras utilizáis la máquina
-   virtual.
-6. Una vez hayáis modificado los ajustes de la máquina virtual, podéis arrancarla haciendo click
-   el `Start` (flecha verde).
-   Si la máquina virtual ha arrancado correctamente, podéis hacer click en el icono de la aplicación
-   `Terminal` y ejecutar el comando `ls -l`. Entonces vuestra pantalla debería ser similar a esta:
+   If  you click on `Settings` you can modify the number of CPUs, amount of RAM, etc 
+   of the virtual maching. In order to run PStomo, 1 CPU is enough. With respect to RAM, a value
+   between 1 GB and half the RAM of the computer is appropriate.
+6. Once you have modified the settings of the virtual machine, it can be started by clicking on
+   `Start` (button with the green arrow).
+   If the virtual maching has booted correctly, click on the icon of the
+   `Terminal` application and run `ls -l`. The output on the screen shold be similar to this:
    ![virtual_machine](virtual_machine.png)
-7. Una vez inicada la máquina virtual, es conveniente instalar las `Guest Additions`. Ir al menú
-   `Devices > Insert Guest Additions CD Image...`. Esto montará un CD virtual que ejecutará 
-   automaticamente la instalación de las `Guest Additions`. Para la instalación pedirá el
-   password de administrador de la máquina virtual, que es **seismo**. Una vez se hayan instalado, expulsar
-   el CD y reiniciar la máquina virtual. La instalación solo ha de realizarse una vez.
+7. Once started the virtual machine, it is useful to install the `Guest Additions`. Go to the menu
+   `Devices > Insert Guest Additions CD Image...`. This will mount a virtual CD that will automatically run
+   the installation of the `Guest Additions`. It will prompt the admin password of the virtual machine
+   which is **seismo**. once installed the `Guest Additions`, eject the CD and reboot the virtual machine.
+   This installation has to be done only once.
 
 
 ## 1. Selecting a region for tomography
