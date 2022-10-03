@@ -1,81 +1,61 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Tutorials - PStomo</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
-
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Tutorials";
-    var mkdocs_page_input_path = "tutorials.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tutorials - PStomo</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tutorials";
+        var mkdocs_page_input_path = "tutorials.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> PStomo</a>
-        <div role="search">
+          <a href=".." class="icon icon-home"> PStomo
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../parameters/">Parameters</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../formats/">File formats</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Tutorials</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../parameters/">Parameters</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../formats/">File formats</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Tutorials</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#0-setting-up-the-linux-virtual-machine">0. Setting up the Linux virtual machine</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#instalacion-de-la-maquina-virtual">Instalación de la máquina virtual</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#posibles-problemas">Posibles problemas:</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#utilizando-windows-virtualbox-no-puede-crear-la-maquina-virtual">Utilizando Windows: VirtualBox no puede crear la máquina virtual</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#utilizando-windows-virtualbox-crea-la-maquina-virtual-pero-al-arrancar-da-un-error">Utilizando Windows: VirtualBox crea la máquina virtual pero al arrancar da un error</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#utilizando-macos">Utilizando macOS</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#1-selecting-a-region-for-tomography">1. Selecting a region for tomography</a>
     </li>
@@ -94,48 +74,37 @@
     <li class="toctree-l2"><a class="reference internal" href="#example-of-a-complete-parameter-file">Example of a complete parameter file</a>
     </li>
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
-                    </li>
-                </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
       </div>
     </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">PStomo</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">PStomo</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Tutorials</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Tutorials</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
-  
   <hr/>
 </div>
-
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="tutorials">Tutorials</h1>
 <h2 id="0-setting-up-the-linux-virtual-machine">0. Setting up the Linux virtual machine</h2>
-<h3 id="instalacion-de-la-maquina-virtual">Instalación de la máquina virtual</h3>
 <p>A Linux virtual machine has been created to run the examples of local
 earthquake tomography processing.</p>
 <p>The file <code>course.ova</code> with the virtual machine (6.4 GB) can be downloaded from this
@@ -143,100 +112,34 @@ earthquake tomography processing.</p>
 <p>To install and run the virtual machine the <code>VirtualBox</code> software in required.
 This software is free and is available for Windows, macOS and Linux computers.
 It can be downloaded in the <a href="https://www.virtualbox.org">VirtualBox</a> home page.</p>
-<p>Una vez instalado <code>VirtualBox</code> habréis de crear la máquina virtual utilizando el
-archivo <code>course.ova</code> y siguiendo los siguientes pasos:</p>
+<p>Once <code>VirtualBox</code> has been installed, it is possible to create the virtual machine
+using the file <code>course.ova</code> with the following steps:</p>
 <ol>
-<li>Abrir la aplicación <code>VirtualBox</code></li>
-<li>Abrir el menú: <code>File &gt; Import Appliance</code></li>
-<li>Navegar hasta el directorio donde habéis descargado el archivo <code>course.ova</code>,
-   seleccionad el archivo y haced click en <code>Open</code> y después en <code>Continue</code>. Entonces
-   aparecerá una ventana similar a esta: <img alt="appliance_settings" src="../appliance_settings.png" /></li>
-<li>En esta ventana podéis cambiar algunos valores como el nombre de la máquina virtual,
-   el número de CPUs, y la RAM. Por el momento se pueden dejar con sus valores por
-   defecto y se pueden cambiar más adelante. Hacer click en <code>Import</code> para generar la
-   máquina virtual. Esto puede tardar unos minutos dependiendo del ordenador.</li>
-<li>Una vez creada la máquina virtual aparece la ventana para administrar máquinas virtuales:
+<li>Open <code>VirtualBox</code></li>
+<li>Go to the menu: <code>File &gt; Import Appliance</code></li>
+<li>Navigate to the directory where <code>course.ova</code> has been downloaded,
+   select the file and click on <code>Open</code> and then <code>Continue</code>. 
+   The following window will appear: <img alt="appliance_settings" src="../appliance_settings.png" /></li>
+<li>In this window you can change some settings, such as the name of the virtual machine,
+   number of CPUs, and RAM. For now you can leave the default values and make those
+   changes later. Click on <code>Import</code> to generate the virtual machine.
+   This can take a few minutes depending on your computer.</li>
+<li>Once the virtual machine has been created, you can manage it in this window:
    <img alt="virtualbox_manager" src="../virtualbox_manager.png" />
-   Si no habéis modificado el nombre, la nueva máquina virtual aparecerá como <code>Ubuntu 16.04</code>.
-   Haciendo click en el botón <code>Settings</code> pueden modificarse los valores de CPUs, RAM, etc de
-   la máquina virtual. En cuanto a CPUs, con 1 es suficiente. En cuanto a la RAM, un valor
-   entre 1 GB y la mitad de la RAM del ordenador es apropiado. Si vuestro ordenador tiene poca
-   RAM (4 GB o menos), intentad no correr ninguna otra aplicación mientras utilizáis la máquina
-   virtual.</li>
-<li>Una vez hayáis modificado los ajustes de la máquina virtual, podéis arrancarla haciendo click
-   el <code>Start</code> (flecha verde).
-   Si la máquina virtual ha arrancado correctamente, podéis hacer click en el icono de la aplicación
-   <code>Terminal</code> y ejecutar el comando <code>ls -l</code>. Entonces vuestra pantalla debería ser similar a esta:
+   If you have not changed the name, the virtual machine will appear as <code>Ubuntu 16.04</code>.
+   If  you click on <code>Settings</code> you can modify the number of CPUs, amount of RAM, etc 
+   of the virtual maching. In order to run PStomo, 1 CPU is enough. With respect to RAM, a value
+   between 1 GB and half the RAM of the computer is appropriate.</li>
+<li>Once you have modified the settings of the virtual machine, it can be started by clicking on
+   <code>Start</code> (button with the green arrow).
+   If the virtual maching has booted correctly, click on the icon of the
+   <code>Terminal</code> application and run <code>ls -l</code>. The output on the screen shold be similar to this:
    <img alt="virtual_machine" src="../virtual_machine.png" /></li>
-<li>Una vez inicada la máquina virtual, es conveniente instalar las <code>Guest Additions</code>. Ir al menú
-   <code>Devices &gt; Insert Guest Additions CD Image...</code>. Esto montará un CD virtual que ejecutará 
-   automaticamente la instalación de las <code>Guest Additions</code>. Para la instalación pedirá el
-   password de administrador de la máquina virtual, que es <strong>seismo</strong>. Una vez se hayan instalado, expulsar
-   el CD y reiniciar la máquina virtual. La instalación solo ha de realizarse una vez.</li>
-<li>Si la máquina virtual no ha arrancado correctamente o reacciona muy lentamente, mirad la 
-   sección <strong>Posibles problemas</strong> al final de esta página.</li>
-</ol>
-<p>La máquina virtual que habéis instalado contiene un entorno de trabajo completo para
-aplicaciones de Sismología en general y de Tomografía de Ondas Superficiales en particular.
-Tiene instaladas las siguientes aplicaciones:</p>
-<ul>
-<li><code>SAC</code> (Seismic Analysis Code): herramienta interactiva para el análisis de sismogramas</li>
-<li><code>SEISAN</code>: paquete para el procesado de terremotos y redes sísmicas</li>
-<li><code>CPS</code> (Computer Programs in Seismology): colección de programas desarrollados por
-   Bob Herrmann (University of Saint Louis) para múltiples aplicaciones en Sismología
-   (procesado de ondas superficiales, generación de sismogramas sintéticos, determinación
-   de mecanismos focales, etc).</li>
-<li><code>GMT5</code> (Generic Mapping Tools): programas para generar mapas, y gráficos para visualización
-   de datos.</li>
-<li>Programas llevar a cabo el proceso completo de tomografía con ondas superficiales.</li>
-</ul>
-<p>Cuando hayáis confirmado que la máquina virtual funciona correctamente, entonces podréis
-borrar el archivo <code>course.ova</code> para ahorrar espacion en disco.</p>
-<h3 id="posibles-problemas">Posibles problemas:</h3>
-<p>A pesar de que <code>VirtualBox</code> es posiblemente el programa más extendido para crear máquinas
-virtuales con distintos sistemas operativos, es posible que os encontréis con algunos
-problemas al correr la máquina virtual. Los problemas más comunes son:</p>
-<h4 id="utilizando-windows-virtualbox-no-puede-crear-la-maquina-virtual">Utilizando Windows: VirtualBox no puede crear la máquina virtual</h4>
-<p>Al abrir el archivo <code>course.ova</code> con <code>File &gt; Import Appliance</code> da un error y no crea la
-máquina virtual.</p>
-<p>Esto puede deberse a que el archivo <code>.ova</code> no se haya descargado correctamente y esté corrompido.
-Los archivos <code>.ova</code> son en realidad archivos <code>.tar</code>, así que pueden descomprimirse utilizando
-cualquier programa que pueda leer archivos <code>.tar</code>. Para ello cambiar el nombre del archivo
-<code>course.ova</code> a <code>course.tar</code>. Hacer doble-click sobre <code>course.tar</code> y comprobar si se descomprime
-correctamente. Si esto da algún error significa que probablemente el archivo está corrompido,
-así que habría que descargarlo de nuevo.</p>
-<p>Si funciona la descompresión, se debería haber creado dos archivos: <code>course.ovf</code> y <code>course-disk001.vmdk</code>.
-El archivo con la extensión <code>.vmdk</code> contiene el disco virtual. Es posible entonces crear la máquina
-virtual a partir de este archivo por ejemplo siguiendo las instrucciones es este
-<a href="https://medium.com/riow/how-to-open-a-vmdk-file-in-virtualbox-e1f711deacc4">link</a>. En nuestro caso
-hay que seleccionar Ubuntu 64-bit como el tipo de máquina virtual (no Windows como en el ejemplo).</p>
-<h4 id="utilizando-windows-virtualbox-crea-la-maquina-virtual-pero-al-arrancar-da-un-error">Utilizando Windows: VirtualBox crea la máquina virtual pero al arrancar da un error</h4>
-<p>Al intentar arrancar la máquina virtual es posible que aparezca un mensaje de error
-similar a este:</p>
-<pre><code>VT-x/AMD-V hardware acceleration is not available on your system
-</code></pre>
-<p>Si vuestra CPU es muy antigua puede que no soporte <code>VT-x/AMD-V</code> y entonces no podréis utilizar
-la máquina virtual. Sin embargo lo más habitual es que <code>VT-x/AMD-V</code> no esté activado, y/o que
-vuestro ordenador esté utilizando <code>Hyper-V</code> que es la tecnología de virtualización de Microsoft
-y que suele estar activada por defecto.</p>
-<p>Si os encontráis con este error, en este
-<a href="https://appuals.com/fix-vt-x-amd-v-hardware-acceleration-is-not-available-on-your-system/">link</a>
-podéis encontrar información detallada sobre como activar <code>VT-x/AMD-V</code>.</p>
-<p>Si al arrancar la máqina virtual no os da ningún error pero funciona muy lenta, puede
-deberse al problema descrito en este 
-<a href="https://mybyways.com/blog/virtualbox-very-slow-on-windows-10">link</a>
-y que también tiene que ver con <code>Hyper-V</code>.</p>
-<h4 id="utilizando-macos">Utilizando macOS</h4>
-<p>Si tenéis in Mac reciente con pantalla retina, también es posible que VirtualBox funcione 
-muy lentamente, incluso en ordenadores con varios núcleos y mucha memoria.</p>
-<p>La solución es abrir VirtualBox en modo de baja resolución, siguiendo los siguientes pasos descritos en este
-<a href="https://www.reddit.com/r/virtualbox/comments/houi9k/how_to_fix_virtualbox_61_running_slow_on_mac/">post de Reddit</a>:</p>
-<ol>
-<li>Navigate to Apps folder. Choose VirtualBox.app</li>
-<li>Right click on VirtualBox.app, Show Package Contents.</li>
-<li>Contents -&gt; Resources -&gt; VirtualBoxVM.app (right click -&gt; Get info)</li>
-<li>Check the "Open in Low Resolution" checkbox.</li>
-<li>Run the Virtual Machine in 100% scale mode and with the "VBoxSVGA" graphics controller selected</li>
+<li>Once started the virtual machine, it is useful to install the <code>Guest Additions</code>. Go to the menu
+   <code>Devices &gt; Insert Guest Additions CD Image...</code>. This will mount a virtual CD that will automatically run
+   the installation of the <code>Guest Additions</code>. It will prompt the admin password of the virtual machine
+   which is <strong>seismo</strong>. once installed the <code>Guest Additions</code>, eject the CD and reboot the virtual machine.
+   This installation has to be done only once.</li>
 </ol>
 <h2 id="1-selecting-a-region-for-tomography">1. Selecting a region for tomography</h2>
 <p>The first step for local earthquake tomography is to select the model region.
@@ -684,29 +587,21 @@ sta_symbol1=&quot;-Si0.2c -L -W0.25p -G255/0/255&quot;
 </code></pre>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../formats/" class="btn btn-neutral float-left" title="File formats"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../formats/" class="btn btn-neutral" title="File formats"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -714,7 +609,7 @@ sta_symbol1=&quot;-Si0.2c -L -W0.25p -G255/0/255&quot;
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
+  <div class="rst-versions" role="note" aria-label="Versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
