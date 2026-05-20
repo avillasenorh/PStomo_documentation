@@ -4,7 +4,6 @@ nav:
     - Home: index.md
     - Parameters: parameters.md
     - File formats: formats.md
-    - Tutorials: tutorials.md
     - About: about.md
 
 extra_javascript:
